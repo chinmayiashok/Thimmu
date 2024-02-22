@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>This is the dialog tag</h1>
+    </center>
+    <hr>
+    <dialog id="my dialog">
+        <button onclick="closeDialog()" style="float: right;">&times;</button>
+        <h1>Create Account</h1>
+        <form action="">
+            <label for="">Username</label><br>
+            <input type="text" placeholder="enter your name"><br>
+            <label for="">Email</label><br>
+            <input type="Email" placeholder="enter your email"><br>
+            
+            <label for="">Password</label><br>
+            <input type="password" placeholder="create a secrete password"><br>
+            <input type="checkbox" name="" id="">
+            
+            <label for="">Privacy policy</label><br>
+           <button type="button">Create Account</button><br>
+           <small>Do you have already account?<a href=""></a></small>
+        </form>
+  </dialog>
+    <button onclick="showDialog()">Create a account</button>
+
+    
+    <script>
+        function showDialog(){
+            document.getElementById('my dialog').show();
+        }
+            function closeDialog(){
+                document.getElementById('my dialog').close();
+            }
+        </script>
+    
+    
+</body>
+</html>

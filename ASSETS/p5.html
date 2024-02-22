@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 5</title>
+</head>
+<body>
+    <center>
+        <h1>PROGRESS BAR TAG</h1>
+    </center>
+    <hr>
+    <h1>DEFAULT PROGRESS BAR</h1>
+    <progress></progress>
+    <h1>STATIC PROGRESS BAR</h1>
+    <progress min="0" max="100" value="50"></progress>
+    
+    <h1>DYNAMIC PROGRESS BAR</h1>
+    <progress min="0" max="100" id="progress"></progress>
+    <p><span id="result"></span></p>
+    <script>
+       var presentDownload = 0;
+        function downloadprogress(){
+            if(presentDownload<100){
+                presentDownload++
+                document.getElementById('progress').value = presentDownload;
+                document.getElementById('result').innerHTML =presentDownload + "% downloaded";
+            
+        }
+        else{
+            alert("download 🥰")
+            document.getElementById('progress').style.display = "none"
+            document.getElementById('result').innerHTML="File has been downloaded😍";
+            document.getElementById('result').style.backgroundColor = "green";
+            document.getElementById('result').style.color = "white";
+            document.getElementById('result').style.padding = "20px";
+            document.getElementById('result').style.borderRadius="100px";
+
+        }
+    }
+        setInterval('downloadprogress()',100)
+    
+    </script>
+</body>
+</html>

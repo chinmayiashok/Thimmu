@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>html-5</title>
+</head>
+<body>
+<center></center>
+<h1>dynamuc progress tag..!</h1>
+<progress min="0" max="100" id="progress"></progress>
+<p id="result"></p>
+<script>
+let presentDownloadValue = 1; //2
+function DownloadProgress(){
+let progress = document.getElementById('progress');
+let result = document.getElementById('result');
+if(presentDownloadValue<=100){
+            presentDownloadValue = presentDownloadValue +1; //1+1 = 2; //2+1= 3
+            progress.value = presentDownloadValue
+            result.innerText = presentDownloadValue + "% downloaded."
+            result.style.color = 'green'
+}
+}
+setInterval('downloadProgress()',100)
+</script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5</title>
+</head>
+<body>
+    <center>
+        <h1>This is CANVAS TAG</h1>
+        <p>
+            the HTML canvas element provide HTML a bitmaps surface to work with. It is used to draw graphics on the webpage.
+            The <b>HTML canvas tag </b> is used to draw graphics using scripting language like JavaScript.
+        </p>
+    </center>
+    <hr>
+    <center>
+        <h1>drawing circle on canvas</h1>
+    </center>
+    <canvas id="myCanvasCircle" width="200" height="200" style="border:2px solid rgb(4, 4, 4);" >
+    </canvas>
+ <script>
+    let canvas1 = document.getElementById("myCanvasCircle").getContext('2d');
+    canvas1.fillStyle= "green"; 
+    canvas1.arc(100, 100, 95, 0, 2*Math.PI);
+    canvas1.fill();
+
+ </script>
+ <center>
+    <h1>CREATING RECTANGLE USING CANVAS</h1>
+ </center>
+ <canvas id="mycanvasRectangle" style="border: 2px solid black;" width ="500" height="500"></canvas>
+ <script>
+    let canvas2 = document.getElementById("mycanvasRectangle").getContext('2d');
+    canvas2.beginPath();
+    canvas2.fillStyle="orange";
+    canvas2.fillRect(0, 0, 500, 100);
+    canvas2.closePath();
+
+    canvas2.beginPath()
+    canvas2.fillStyle="white";
+    canvas2.fillRect(0, 100, 500, 100);
+    canvas2.closePath();
+
+    canvas2.beginPath()
+    canvas2.fillStyle="green";
+    canvas2.fillRect(0, 200, 500, 100);
+    canvas2.closePath();
+
+    canvas2.beginPath()
+    canvas2.strokeStyle="blue";
+    canvas2.arc(250, 150, 50, 0, 2*Math.PI)
+    canvas2.lineWidth="5"
+    canvas2.stroke();
+    canvas2.closePath();
+
+    canvas2.beginPath()
+    canvas2.moveTo(250,150);
+    canvas2.lineTo(250,100);
+    canvas2.strokeStyle="blue"; 
+    canvas2.lineWidth="5"
+    canvas2.stroke();
+    canvas2.closePath();
+
+    canvas2.beginPath()
+    canvas2.moveTo(250,150);
+    canvas2.lineTo(265,100);
+    canvas2.strokeStyle="blue"; 
+    canvas2.lineWidth="5"
+    canvas2.stroke();
+    canvas2.closePath();
+
+    canvas2.beginPath()
+    canvas2.moveTo(250,150);
+    canvas2.lineTo(285,110);
+    canvas2.strokeStyle="blue"; 
+    canvas2.lineWidth="5"
+    canvas2.stroke();
+    canvas2.closePath();
+    
+    canvas2.beginPath()
+    canvas2.moveTo(250,150);
+    canvas2.lineTo(280,115);
+    canvas2.strokeStyle="blue"; 
+    canvas2.lineWidth="5"
+    canvas2.stroke();
+    canvas2.closePath();
+
+    canvas2.beginPath()
+    canvas2.moveTo(250,150);
+    canvas2.lineTo(290,145);
+    canvas2.strokeStyle="blue"; 
+    canvas2.lineWidth="5"
+    canvas2.stroke();
+    canvas2.closePath();
+    
+    
+    canvas2.beginPath()
+    canvas2.fillStyle="blue";
+    canvas2.arc(250, 150, 10, 0, 2*Math.PI)
+    canvas2.fill();
+    canvas2.closePath();
+
+
+ </script>
+</body>
+</html>
